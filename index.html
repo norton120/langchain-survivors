@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LangChain Survivors - Support for the Traumatized</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        accent: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="bg-primary/10 text-primary px-4 py-2 rounded-full font-bold text-xl shadow-md hover:shadow-lg transition-shadow">🦜🔗 = 💩</div>
+                <div class="text-2xl font-bold text-primary">LangChain Survivors</div>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#mission" class="text-gray-700 hover:text-primary font-medium transition-colors">Our Mission</a>
+                <a href="#symptoms" class="text-gray-700 hover:text-primary font-medium transition-colors">Common Symptoms</a>
+                <a href="#support" class="text-gray-700 hover:text-primary font-medium transition-colors">Support Groups</a>
+                <a href="#support" class="text-gray-700 hover:text-primary font-medium transition-colors">Resources</a>
+                <a href="#contact" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-amber-600 transition-colors">Get Help</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-16">
+        <section class="relative bg-gradient-to-br from-blue-50 to-blue-100 py-32 px-4 sm:px-6 lg:px-8 text-center">
+            <div class="absolute inset-0 overflow-hidden">
+                <!-- Hero image attribution:
+                     Photo by Claudia Wolff on Unsplash
+                     https://unsplash.com/photos/person-crying-beside-bed-owBcefxgrIE -->
+                <img src="images/hero-bg.jpg"
+                     alt="Stressed developer"
+                     class="absolute inset-0 w-full h-full object-cover opacity-20">
+            </div>
+            <div class="relative z-10">
+                <h1 class="text-4xl md:text-5xl font-bold text-primary mb-4">You Are Not Alone</h1>
+                <p class="text-xl text-gray-600 mb-8">Support for survivors of LangChain</p>
+            </div>
+        </section>
+
+        <section id="mission" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Our Mission</h2>
+            <p class="text-center text-gray-600 mb-8">We provide support, resources, and a safe space for developers, organizations, and venture capitalists who have suffered through:</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:-translate-y-1 transition-transform overflow-hidden">
+                    <!-- Dependency hell image attribution:
+                         By Fra Angelico - The Yorck Project (2002) 10.000 Meisterwerke der Malerei (DVD-ROM)
+                         Public Domain, https://commons.wikimedia.org/w/index.php?curid=147478 -->
+                    <img src="images/dependency-hell.jpg"
+                         alt="Dependency Hell"
+                         class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-primary mb-3">Dependency Hell</h3>
+                    <p class="text-gray-600">Navigating through endless dependency conflicts for packages you don't even need</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:-translate-y-1 transition-transform overflow-hidden">
+                    <img src="images/api-confusion.jpg"
+                         alt="DSL Dysfunction"
+                         class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-primary mb-3">API Dysfunction</h3>
+                    <p class="text-gray-600">Deciphering cryptic and inconsistent APIs reminiscent of early 2000s PHP</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:-translate-y-1 transition-transform overflow-hidden">
+                    <!-- Spaghetti code image attribution:
+                         Photo by Nha Van on Unsplash
+                         https://unsplash.com/photos/pasta-with-green-sauce-on-black-background-i9lPk8PJCZg -->
+                    <img src="images/spaghetti-code.jpg"
+                         alt="Spaghetti Architecture"
+                         class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-primary mb-3">Spaghetti Architecture</h3>
+                    <p class="text-gray-600">Untangling impossible-to-debug code structures</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:-translate-y-1 transition-transform overflow-hidden">
+                    <!-- Wheel reinvention image attribution:
+                         By Pearson Scott Foresman - This file has been extracted from another file, Public Domain, https://commons.wikimedia.org/w/index.php?curid=3237459 -->
+                    <img src="images/wheel-reinvention.png"
+                         alt="Wheel Reinvention"
+                         class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-primary mb-3">Wheel Reinvention</h3>
+                    <p class="text-gray-600">Subjection to novel solutions for already long-solved problems</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:-translate-y-1 transition-transform overflow-hidden">
+                    <!-- Investor driven development image attribution:
+                         Photo by krakenimages on Unsplash
+                         https://unsplash.com/photos/man-in-white-dress-shirt-sitting-beside-woman-in-black-long-sleeve-shirt-376KN_ISplE -->
+                    <img src="images/investor-driven-development.jpg"
+                         alt="Investor Driven Development"
+                         class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-primary mb-3">Investor Driven Development</h3>
+                    <p class="text-gray-600">Reverse-engineering a stack from things your investor overheard at brunch</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:-translate-y-1 transition-transform overflow-hidden">
+                    <!-- Code quality gaslighting image attribution:
+                         Photo by <a href="https://unsplash.com/@bjorkman?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Rory Björkman</a> on <a href="https://unsplash.com/photos/grayscale-photo-of-street-post-with-smoke-zyiKqZCzHsY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
+                    <img src="images/gasslight.jpg"
+                         alt="Code Quality Gaslighting"
+                         class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-primary mb-3">Code Quality Gaslighting</h3>
+                    <p class="text-gray-600">Claims of production use causing you to question your sanity</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="symptoms" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Common Symptoms</h2>
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center overflow-hidden">
+                    <img src="images/ptsd.jpg"
+                         alt="PTSD"
+                         class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-primary mb-3">PTSD (Post-Traumatic Stack Disorder)</h3>
+                    <p class="text-gray-600">Flashbacks to dependency resolution errors, mind-bending resource use, and Jupyter notebooks as documentation</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center overflow-hidden">
+                    <!-- Rube Goldberg image attribution:
+                         By Rube Goldberg - Originally published in Collier's, September 26 1931, Public Domain, https://commons.wikimedia.org/w/index.php?curid=9886955 -->
+                    <img src="images/rube-goldberg.gif"
+                         alt="Rube Goldberg"
+                         class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-primary mb-3">Fear of Simplicity</h3>
+                    <p class="text-gray-600">Paralyzing terror any time a greatly overcomplicated solution is not proposed</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center overflow-hidden">
+                    <!-- Vibe coding image attribution:
+                         Photo by Stephen Arnold on Unsplash
+                         https://unsplash.com/photos/group-of-people-during-daytime-xSTQzSLJA4c -->
+                    <img src="images/vibe-coding.jpg"
+                         alt="Vibe Coding"
+                         class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-primary mb-3">Vibe Coding Dependency</h3>
+                    <p class="text-gray-600">Finding yourself so repulsed by the codebase that you just let the LLM do whatever it wants</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <p class="text-2xl italic text-gray-700 mb-6 leading-relaxed">"One morning it hit me: I was downloading an operating system's worth of code to basically use f-strings. What had I become?"</p>
+                    <p class="text-primary font-semibold">~ Jeff, Software Developer</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <p class="text-2xl italic text-gray-700 mb-6 leading-relaxed">"I was obsessed. My daughter was born around that time; I hope when my little girl LangSusan grows up, she will understand."</p>
+                    <p class="text-primary font-semibold">~ Sarah, VC Partner</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <p class="text-2xl italic text-gray-700 mb-6 leading-relaxed">"Three weeks ago, we sent our lead engineer Dave into the codebase to try and find a parsing error. We will all miss you, Dave."</p>
+                    <p class="text-primary font-semibold">~ Mike, Full Stack Developer</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <p class="text-2xl italic text-gray-700 mb-6 leading-relaxed">"I signed off on funds for a simple chatbot. Now we've had to raise another funding round just to cover the storage and compute costs."</p>
+                    <p class="text-primary font-semibold">~ Lisa, CFO</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <p class="text-2xl italic text-gray-700 mb-6 leading-relaxed">"I am pretty sure the release we are on has our k8s cluster mining crypto for some guy in Tibet."</p>
+                    <p class="text-primary font-semibold">~ Sumar, Data Engineer</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <p class="text-2xl italic text-gray-700 mb-6 leading-relaxed">"I wake up in the night screaming sometimes; I am haunted by visions of breaking-change minor versions and I don't know if I will ever be whole again."</p>
+                    <p class="text-primary font-semibold">~ Lorgen, AI Engineer</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="support" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Support & Resources</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center overflow-hidden">
+                    <img src="images/meetings.jpg"
+                         alt="Weekly Meetings"
+                         class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-primary mb-3">Weekly Meetings</h3>
+                    <p class="text-gray-600 mb-4">Join our weekly virtual support groups</p>
+                    <a href="#contact" class="inline-block bg-primary text-white px-6 py-2 rounded-lg hover:bg-secondary transition-colors">Get Help</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center overflow-hidden">
+                    <img src="images/discord.jpg"
+                         alt="Discord Community"
+                         class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-primary mb-3">Online Community</h3>
+                    <p class="text-gray-600 mb-4">24/7 support in our community server</p>
+                    <a href="#contact" class="inline-block bg-primary text-white px-6 py-2 rounded-lg hover:bg-secondary transition-colors">Get Help</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center overflow-hidden">
+                    <img src="images/code-review.jpg"
+                         alt="Code Review Therapy"
+                         class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-primary mb-3">Code Review Therapy</h3>
+                    <p class="text-gray-600 mb-4">Get help talking through what LangChain code did to you</p>
+                    <a href="#contact" class="inline-block bg-primary text-white px-6 py-2 rounded-lg hover:bg-secondary transition-colors">Get Help</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center overflow-hidden">
+                    <img src="images/alternatives.jpg"
+                         alt="Alternative Libraries"
+                         class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-primary mb-3">Healthy Libraries</h3>
+                    <p class="text-gray-600">Discover healthier alternatives to LangChain <sub>(like <a style="text-decoration: underline;color: #2563eb; font-style: italic;" href="https://github.com/nosuchagency/promptic">Promptic</a>, vendor sdks, or just using f-strings)</sub></p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center overflow-hidden">
+                    <img src="images/examples.jpg"
+                         alt="Code Examples"
+                         class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-primary mb-3">Clean Code Examples</h3>
+                    <p class="text-gray-600">Remind yourself what maintainable code patterns look like</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center overflow-hidden">
+                    <img src="images/mental-health.jpg"
+                         alt="Mental Health Tips"
+                         class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-primary mb-3">Mental Health Tips</h3>
+                    <p class="text-gray-600">Coping strategies for dependency management</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="bg-gray-50 rounded-2xl p-8 relative overflow-hidden">
+                <img src="images/coffee.jpg"
+                     alt="Coffee"
+                     class="absolute inset-0 w-full h-full object-cover opacity-10">
+                <div class="relative z-10 max-w-2xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Get Help</h2>
+                    <p class="text-gray-600 mb-8">Don't suffer the trauma of LangChain alone.<br/>Reach out today to begin your healing journey.</p>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="4" required
+
+                                      placeholder="I am ready to live a full life, free from LangChain!"
+                                      class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit"
+                                    class="w-full bg-accent text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-600 transition-colors">
+                                Get Help
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h4 class="text-xl font-semibold mb-4">LangChain Survivors</h4>
+                <p class="text-gray-400">Supporting developers since 2023</p>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
+                <div class="space-y-2">
+                    <a href="#mission" class="block text-gray-400 hover:text-white transition-colors">About</a>
+                    <a href="#contact" class="block text-gray-400 hover:text-white transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+            <p>&copy; 2024 LangChain Survivors. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
